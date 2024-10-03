@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import '../css/pages/introduction.scss';
 export default function Introduction() {
     const textContent =
-        '你好，欢迎来到我的个人网站，我作为一个刚刚接触Web前端开发的新人，热爱编程、设计。在这里做一些个人的分享，有的是技术分享，有的是知识总结，如果你有什么想法，欢迎与我交流。---当然，如果内容出现问题，欢迎指正。我欢迎各位通过邮箱的方式跟我进行沟通。---最后，祝你在这里的旅程愉快！';
+        '欢迎来到我的个人网站，我作为一个刚刚接触Web前端开发的新人，热爱编程、设计。在这里做一些个人的分享，有的是技术分享，有的是知识总结，如果你有什么想法，欢迎与我交流。---当然，如果内容出现问题，欢迎指正。我欢迎各位通过邮箱的方式跟我进行沟通。---最后，祝你在这里的旅程愉快！';
     const content = textContent.split('---').map((item, index) => {
         return (
             <motion.p
@@ -50,13 +50,13 @@ function PageTitle() {
                 initial={initMotion}
                 animate={animateMotion}
                 transition={{ duration: 3 }}>
-                Welcome To
+                作者的
             </motion.span>
             <motion.span
                 initial={{ opacity: 0 }}
                 animate={animateMotion}
                 transition={{ duration: 6 }}>
-                My Website
+                留言板
             </motion.span>
         </motion.h1>
     );

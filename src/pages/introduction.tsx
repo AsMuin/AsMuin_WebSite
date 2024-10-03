@@ -50,7 +50,7 @@ function PageTitle() {
                 initial={initMotion}
                 animate={animateMotion}
                 transition={{ duration: 3 }}>
-                作者的
+                作者
             </motion.span>
             <motion.span
                 initial={{ opacity: 0 }}

@@ -6,7 +6,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import styles from '../css/pages/index.module.scss';
 import { motion } from 'framer-motion';
-
+import avatar from '@site/static/img/happy-star.png';
 function HomepageHeader() {
     const { siteConfig } = useDocusaurusContext();
     return (
@@ -24,7 +24,7 @@ function HomepageHeader() {
                         }}
                         whileHover={{ scale: 1.1 }}
                         className={styles.avatar}
-                        src="/img/happy-star.png"
+                        src={avatar}
                         alt="AsMuin Logo"
                     />
                 </Heading>
@@ -32,7 +32,7 @@ function HomepageHeader() {
                 <div className={styles.buttons}>
                     <Link
                         className="button button--secondary button--lg"
-                        to="/Introduction">
+                        to="/introduction">
                         来自本站作者的一些话
                     </Link>
                 </div>

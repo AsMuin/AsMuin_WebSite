@@ -1,0 +1,24 @@
+// .page-introduction {
+.page-title {
+    display: flex;
+    justify-content: center;
+    & :first-child {
+        margin-right: 10px;
+    }
+    & span {
+        background: linear-gradient(to right, #786fcb, #55db43);
+        background-clip: text;
+        color: transparent;
+    }
+}
+.content {
+    padding: 5px 15px;
+    .text {
+        white-space: pre-wrap;
+        font-size: 16px;
+        &::before {
+            content: '    ';
+        }
+    }
+}
+// }

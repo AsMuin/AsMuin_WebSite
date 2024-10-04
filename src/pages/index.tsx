@@ -6,7 +6,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import styles from '../css/pages/index.module.scss';
 import { motion } from 'framer-motion';
-import avatar from '@site/static/img/happy-star.png';
+import avatar from '@site/static/img/avatar.png';
 function HomepageHeader() {
     const { siteConfig } = useDocusaurusContext();
     return (
@@ -42,10 +42,10 @@ function HomepageHeader() {
 }
 
 export default function Home(): JSX.Element {
-    const { siteConfig } = useDocusaurusContext();
+    // const { siteConfig } = useDocusaurusContext();
     return (
         <Layout
-            title={`Hello from ${siteConfig.title}`}
+            title={`首页`}
             description="Description will go into a meta tag in <head />">
             <HomepageHeader />
             <main>

@@ -3,7 +3,7 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-    title: "AsMuin's Website",
+    title: '三木树屋',
     tagline: '互联网的海洋广阔无边，感谢你在这个小小的地方驻足停留',
     favicon: 'img/favicon.ico',
 
@@ -66,7 +66,7 @@ const config: Config = {
         // Replace with your project's social card
         image: 'img/docusaurus-social-card.jpg',
         navbar: {
-            title: "AsMuin's Website",
+            title: '三木树屋',
             logo: {
                 alt: "AsMuin's Website Logo",
                 src: 'img/logo.svg'
@@ -79,7 +79,7 @@ const config: Config = {
                     position: 'left',
                     label: '知识文档'
                 },
-                { to: '/blog', label: '个人记录', position: 'left' },
+                { to: '/blog', label: '随记', position: 'left' },
                 {
                     href: 'https://github.com/AsMuin',
                     label: 'GitHub',
@@ -100,10 +100,10 @@ const config: Config = {
                     ]
                 },
                 {
-                    title: 'Blog',
+                    title: '随记',
                     items: [
                         {
-                            label: 'Blog',
+                            label: '随记',
                             to: '/blog'
                         }
                     ]
@@ -139,7 +139,7 @@ const config: Config = {
                     ]
                 }
             ],
-            copyright: `Copyright © ${new Date().getFullYear()} AsMuin_WebSite, Inc. Built with Docusaurus.`
+            copyright: `Copyright © ${new Date().getFullYear()} 三木树屋, Inc. Built with Docusaurus.`
         },
         prism: {
             theme: prismThemes.github,

@@ -17,7 +17,7 @@ export default function Introduction() {
         );
     });
     return (
-        <Layout title="Introduction" description="just for introduction">
+        <Layout title="介绍" description="来自作者的一些话">
             {/* <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

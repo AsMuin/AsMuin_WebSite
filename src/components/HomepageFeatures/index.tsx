@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 
 type FeatureItem = {
     title: string;
-    Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+    Svg: string;
     link: string;
     description: JSX.Element;
 };
@@ -23,7 +23,7 @@ const FeatureList: FeatureItem[] = [
     // },
     {
         title: 'Web前端知识温故而知新',
-        Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+        Svg: require('@site/static/img/tree.png').default,
         link: '/docs/introduce',
         description: (
             <>
@@ -37,7 +37,7 @@ const FeatureList: FeatureItem[] = [
     },
     {
         title: '个人随记',
-        Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+        Svg: require('@site/static/img/cabin.png').default,
         link: '/blog',
         description: <>记录前端学习历程、技术总结、面试经验、个人心得体会等。</>
     }
@@ -48,7 +48,8 @@ function Feature({ title, Svg, description, link }: FeatureItem) {
         <div className={clsx('col col--6')}>
             <Link to={link as string}>
                 <div className="text--center">
-                    <Svg className={styles.featureSvg} role="img" />
+                    {/* <Svg className={styles.featureSvg} role="img" /> */}
+                    <img src={Svg} alt="" />
                 </div>
                 <div className="text--center padding-horiz--md">
                     <Heading as="h3">{title}</Heading>

@@ -64,7 +64,11 @@ function PageTitle() {
 }
 function PageEnd() {
     return (
-        <motion.div className="page-end">
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 3 }}
+            className="page-end">
             <h3 className="author">作者：AsMuin</h3>
             <img
                 className="page-end-img"

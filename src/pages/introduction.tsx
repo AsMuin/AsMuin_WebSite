@@ -36,22 +36,22 @@ export default function Introduction() {
     );
 }
 function PageTitle() {
-    const initMotion = {
-        opacity: 0,
-        scale: 0.8
-    };
+    // const initMotion = {
+    //     opacity: 0,
+    //     scale: 0.8
+    // };
     const animateMotion = {
         opacity: 1,
         scale: 1
     };
     return (
         <motion.h1 className="page-title">
-            <motion.span
+            {/* <motion.span
                 initial={initMotion}
                 animate={animateMotion}
                 transition={{ duration: 3 }}>
                 作者
-            </motion.span>
+            </motion.span> */}
             <motion.span
                 initial={{ opacity: 0 }}
                 animate={animateMotion}

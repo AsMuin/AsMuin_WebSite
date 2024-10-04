@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
     title: "AsMuin's Website",
-    tagline: '互联网的海洋广阔无边，感谢你能在这个小小的地方驻足停留',
+    tagline: '互联网的海洋广阔无边，感谢你在这个小小的地方驻足停留',
     favicon: 'img/favicon.ico',
 
     // Set the production url of your site here
@@ -38,7 +38,7 @@ const config: Config = {
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
                     editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
+                        'https://github.com/AsMuin/AsMuin_WebSite/tree/main'
                 },
                 blog: {
                     showReadingTime: true,
@@ -49,7 +49,7 @@ const config: Config = {
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
                     editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                        'https://github.com/AsMuin/AsMuin_WebSite/tree/main',
                     // Useful options to enforce blogging best practices
                     onInlineTags: 'warn',
                     onInlineAuthors: 'warn',

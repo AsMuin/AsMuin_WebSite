@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import '../css/pages/introduction.scss';
 export default function Introduction() {
     const textContent =
-        '欢迎来到我的个人网站，我作为一个刚刚接触Web前端开发的新人，热爱编程、设计。在这里做一些个人的分享，有的是技术分享，有的是知识总结，如果你有什么想法，欢迎与我交流。---当然，如果内容出现问题，欢迎指正。我欢迎各位通过邮箱的方式跟我进行沟通。---最后，祝你在这里的旅程愉快！';
+        '欢迎来到我的个人网站，作为一个刚刚接触Web前端开发的新人，本站作为我平时涉及到的知识记录和总结，主要涉猎于Web前端技术领域。作者搭建的初衷也是尝试个人部署一个属于自己的小避风港。在参与实习之余，拓展自己的开发经历，希望能帮助到更多跟我同样处境的新人。---当然，作者本身技术力有限，部分文案可能存在疏漏或者错误，如果内容出现问题，我欢迎各位通过邮箱的方式跟我进行沟通。---最后，祝你在这里的旅程愉快！';
     const content = textContent.split('---').map((item, index) => {
         return (
             <motion.p
@@ -32,6 +32,7 @@ export default function Introduction() {
                     </p> */}
             </motion.section>
             {/* </motion.div> */}
+            <PageEnd></PageEnd>
         </Layout>
     );
 }
@@ -59,5 +60,17 @@ function PageTitle() {
                 留言板
             </motion.span>
         </motion.h1>
+    );
+}
+function PageEnd() {
+    return (
+        <motion.div className="page-end">
+            <h3 className="author">作者：AsMuin</h3>
+            <img
+                className="page-end-img"
+                src={require('@site/static/img/happy-star.png').default}
+                alt="happy meet you"
+            />
+        </motion.div>
     );
 }

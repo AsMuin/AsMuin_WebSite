@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
     title: '三木树屋',
-    tagline: '互联网的海洋广阔无边，感谢你在这个小小的地方驻足停留',
+    tagline: '😉互联网的海洋广阔无边，感谢你在这个小小的地方驻足停留😉',
     favicon: 'img/favicon.ico',
 
     // Set the production url of your site here
@@ -94,7 +94,7 @@ const config: Config = {
                     title: '文档',
                     items: [
                         {
-                            label: '导言',
+                            label: '前言',
                             to: '/docs/introduce'
                         }
                     ]
@@ -139,7 +139,7 @@ const config: Config = {
                     ]
                 }
             ],
-            copyright: `Copyright © ${new Date().getFullYear()} 三木树屋, Inc. Built with Docusaurus.`
+            copyright: `Created by AsMuin with ❤️ Docusaurus.`
         },
         prism: {
             theme: prismThemes.github,

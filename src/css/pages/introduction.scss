@@ -13,6 +13,7 @@
 }
 .content {
     padding: 5px 15px;
+
     .text {
         white-space: pre-wrap;
         font-size: 16px;
@@ -21,4 +22,39 @@
         }
     }
 }
+// }
+
+.page-end {
+    @media (min-width: 768px) {
+        width: 200px;
+        height: 225px;
+        margin: 30px 120px 30px auto;
+        .page-end-img {
+            text-align: center;
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        width: 150px;
+        height: 200px;
+        margin: 30px auto;
+        .page-end-img {
+            text-align: center;
+            width: 150px;
+            height: 150px;
+        }
+    }
+    .author {
+        text-align: center;
+        font-size: 20px;
+    }
+}
+
+// .page-end {
+//     .author {
+//         text-align: center;
+//         font-size: 20px;
+//     }
 // }

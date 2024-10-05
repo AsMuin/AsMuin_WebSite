@@ -28,7 +28,7 @@ const config: Config = {
         defaultLocale: 'zh-Hans',
         locales: ['zh-Hans']
     },
-    plugins: [['docusaurus-plugin-sass']],
+    plugins: ['docusaurus-plugin-sass'],
     presets: [
         [
             'classic',

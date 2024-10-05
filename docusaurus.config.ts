@@ -28,7 +28,19 @@ const config: Config = {
         defaultLocale: 'zh-Hans',
         locales: ['zh-Hans']
     },
-    plugins: ['docusaurus-plugin-sass'],
+    plugins: [
+        ['docusaurus-plugin-sass'],
+        [
+            '@docusaurus/plugin-ideal-image',
+            {
+                quality: 70,
+                max: 300, // max resized image's size.
+                min: 150, // min resized image's size. if original is lower, use that size.
+                steps: 2, // the max number of images generated between min and max (inclusive)
+                disableInDev: false
+            }
+        ]
+    ],
     presets: [
         [
             'classic',
@@ -64,7 +76,7 @@ const config: Config = {
 
     themeConfig: {
         // Replace with your project's social card
-        image: 'img/docusaurus-social-card.jpg',
+        image: 'img/home.png',
         navbar: {
             title: '三木树屋',
             logo: {
@@ -96,18 +108,22 @@ const config: Config = {
                         {
                             label: '前言',
                             to: '/docs/introduce'
-                        }
-                    ]
-                },
-                {
-                    title: '随记',
-                    items: [
+                        },
                         {
                             label: '随记',
                             to: '/blog'
                         }
                     ]
                 },
+                // {
+                //     title: '随记',
+                //     items: [
+                //         {
+                //             label: '随记',
+                //             to: '/blog'
+                //         }
+                //     ]
+                // },
                 // {
                 //     title: 'Community',
                 //     items: [

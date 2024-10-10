@@ -104,3 +104,58 @@ const config: Config = {
 ```
 ## const、let 对类型推断的作用
 一般情况下,使用`const`声明的变量,`TypeScript`直接推断赋值字面量的类型。`let`会推断赋值字面量类型的父类型。
+```typescript
+const str = 'this is string'; // str: 'this is string'
+  const num = 1; // num: 1
+  const bool = true; // bool: true
+  -------------------------------------------------------------
+  let str = 'this is string'; // str: string
+  let num = 1; // num: number
+  let bool = true; // bool: boolean
+```
+## 联合类型
+联合类型表示取值可以为多种类型中的一种，使用 `|` 分隔每个类型。
+```typescript
+type Direction = 'up' | 'down' | 'left' | 'right';
+
+function move(dir: Direction) {
+  // ...
+}
+move('up'); // ok
+move('right'); // ok
+move('top'); // ts(2345) Argument of type '"top"' is not assignable to parameter of type 'Direction'
+```
+## 类型别名
+类型别名可以给一个类型起一个新的名字，方便使用。
+```typescript
+type Name = string;
+type Age = number;
+type Person = {
+  name: Name;
+  age: Age;
+};
+
+const person: Person = {
+  name: 'Tom',
+  age: 25
+};
+```
+## 交叉类型
+交叉类型是将多个类型合并为一个类型。它包含了所需的所有类型的特性，使用`&`定义。
+
+以下是一个有问题的例子
+```typescript
+type Useless = string & number;
+```
+因为没有任何属性既是 `string` 类型又是 `number` 类型。因此，在上述的代码中，类型别名 `Useless` 的类型就是个 `never`
+```typescript
+type IntersectionType = { id: number; name: string; } & { age: number };
+  const mixed: IntersectionType = {
+    id: 1,
+    name: 'name',
+    age: 18
+  }
+```
+交叉用于多个接口类型合并成一个类型，等同接口继承的效果，也就是所谓的合并接口类型
+
+**值得注意多个接口类型存在同名属性时，会对同名属性进行交叉合并，而不是覆盖**

@@ -159,3 +159,107 @@ type IntersectionType = { id: number; name: string; } & { age: number };
 交叉用于多个接口类型合并成一个类型，等同接口继承的效果，也就是所谓的合并接口类型
 
 **值得注意多个接口类型存在同名属性时，会对同名属性进行交叉合并，而不是覆盖**
+
+## 接口
+接口定义了对象的形状，可以用来定义函数、类、对象等。接口中的属性必须是某种类型，属性的名字和类型是必需的。
+```typescript
+interface Person {
+  name: string;
+  age: number;
+  sayHello(): void;
+}
+
+const person: Person = {
+  name: 'Tom',
+  age: 25,
+  sayHello() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+```
+### 只读类型
+在接口的属性名前面加上 `readonly` 关键字，可以将属性设置为只读。
+```typescript
+interface Person {
+  readonly name: string;
+  age: number;
+  sayHello(): void;
+}
+
+const person: Person = {
+  name: 'Tom',
+  age: 25,
+  sayHello() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+
+person.name = 'Jerry'; // error
+```
+### 可选属性
+在接口的属性名前面加上 `?` 号，可以将属性设置为可选。
+```typescript
+interface Person {
+  name?: string;
+  age: number;
+  sayHello(): void;
+}
+
+const person: Person = {
+  age: 25,
+  sayHello() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+```
+### 索引签名
+索引签名可以为数组、元组、对象类型添加额外的约束。
+```typescript
+interface StringArray {
+  [index: number]: string;
+}
+
+const stringArray: StringArray = ['hello', 'world'];
+
+stringArray[0] = 'hi'; // ok
+stringArray[1] = 123; // error
+```
+### 函数类型
+函数类型可以用来定义函数的形状。
+```typescript
+interface AddFunc {
+  (x: number, y: number): number;
+  }
+
+const add: AddFunc = (x, y) => x + y;
+```
+**一旦定义了任意属性，那么确定属性和可选属性的类型都必须是它的类型的子集**
+
+## interface 和 type 的区别
+`interface` 和 `type` 都可以用来定义对象类型，但是两者有一些区别。
+```typescript
+interface Person {
+  name: string;
+  age: number;
+  sayHello(): void;
+}
+
+type PersonType = {
+  name: string;
+  age: number;
+  sayHello(): void;
+}
+```
+两者的区别主要体现在以下方面：
+- `interface` 用来定义对象的形状，可以包含属性、方法、索引签名等。
+- `type` 用来定义类型别名，可以用来给一个类型起一个新的名字。
+
+
+- `interface` 用来定义对象的形状，可以包含属性、方法、索引签名等。
+- `type` 用来定义类型别名，可以用来给一个类型起一个新的名字。
+
+这里简单的说明一下作者的理解和用法：
+- `interface` 用来定义一个对象的数据结构类型
+- `type` 用来指明该类型与其他类型的关系 （譬如联合类型...泛型）
+
+详情参照其他文档[interface vs type]()

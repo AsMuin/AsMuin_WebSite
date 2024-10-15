@@ -262,4 +262,4 @@ type PersonType = {
 - `interface` 用来定义一个对象的数据结构类型
 - `type` 用来指明该类型与其他类型的关系 （譬如联合类型...泛型）
 
-<!-- 详情参照其他文档[interface vs type]() -->
+*详情参照其他文档[interface vs type](/blog/2024/10/15/Interface_Type)*

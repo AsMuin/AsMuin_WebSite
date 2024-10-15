@@ -10,3 +10,7 @@ Vite:
     label: Vite
     permalink: /vite
     description: 关于Vite的相关文章
+Typescript:
+    label: Typescript
+    permalink: /typescript
+    description: 关于Typescript的相关文章

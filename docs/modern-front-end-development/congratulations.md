@@ -60,5 +60,5 @@ sidebar_position: 1
 
 
 ## 补充
-`Hash`模式下,通过`hashchange`事件监听`URL`变化,结合`DOM`操作去更新页面。
-`History`模式下,通过`popstate`事件来捕获`URL`的变化,并通过`pushState`去改变当前的`URL`同时保持页面不刷新。结合结合`DOM`操作去更新页面。
+- `Hash`模式下,通过`hashchange`事件监听`URL`变化,结合`DOM`操作去更新页面。
+- `History`模式下,通过`popstate`事件来捕获`URL`的变化,并通过`pushState`去改变当前的`URL`同时保持页面不刷新。结合结合`DOM`操作去更新页面。

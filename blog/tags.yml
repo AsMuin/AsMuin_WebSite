@@ -14,3 +14,7 @@ Typescript:
     label: Typescript
     permalink: /typescript
     description: 关于Typescript的相关文章
+CSS:
+    label: CSS
+    permalink: /css
+    description: 关于CSS的相关文章

@@ -18,3 +18,7 @@ CSS:
     label: CSS
     permalink: /css
     description: 关于CSS的相关文章
+Fetch:
+    label: Fetch
+    permalink: /fetch
+    description: 涉及到网络请求、接口数据获取的相关文章

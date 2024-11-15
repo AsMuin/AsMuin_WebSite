@@ -26,3 +26,7 @@ Redux:
     label: Redux
     permalink: /redux
     description: 关于Redux的相关文章
+TailwindCSS:
+    label: TailwindCSS
+    permalink: /tailwind
+    description: 涉及到TailwindCSS的文章

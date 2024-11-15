@@ -22,3 +22,7 @@ Fetch:
     label: Fetch
     permalink: /fetch
     description: 涉及到网络请求、接口数据获取的相关文章
+Redux:
+    label: Redux
+    permalink: /redux
+    description: 关于Redux的相关文章

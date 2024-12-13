@@ -135,4 +135,30 @@ catch (e: any) {
 ```
 借助`try catch`来捕获执行过程中的错误,一旦出现错误我们直接返回响应数据(告知业务出现错误,并返回错误信息)---这种做法既能够及时返回处理信息也符合使用直觉。
 
----未完待续
+
+## 控制器(userController.ts)
+```ts
+const userInfo: controllerAction = async (req, res) => {
+    try {
+        const {userId} = req.body;
+        const getResponse = apiResponse(res);
+        const user = await User.findById(userId);
+        if (!user) {
+            return getResponse(false, '用户不存在');
+        } else {
+            return getResponse(true, '获取用户信息成功', {
+                data: {
+                    name: user.name,
+                    email: user.email,
+                    avatar: user.avatar ?? ''
+                }
+            });
+        }
+    } catch (error: any) {
+        console.error(error);
+        apiResponse(res)(false, error.message);
+    }
+};
+```
+这里仅截取`userInfo`,首先在`res.body`中获取`userId`, `User`是一个`mongoose`模型,涉及到数据库驱动工具,这不是本文的重心,它在这里的作用就是根据`userId`从数据库里找到对应的数据信息。
+获取到需要的信息后,`res.json`发送给客户端,如果出现了错误,也会发送数据, 但是`success`为`false`。

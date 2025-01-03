@@ -10,8 +10,8 @@ Vite:
     label: Vite
     permalink: /vite
     description: 关于Vite的相关文章
-Typescript:
-    label: Typescript
+TypeScript:
+    label: TypeScript
     permalink: /typescript
     description: 关于Typescript的相关文章
 CSS:
@@ -30,3 +30,7 @@ TailwindCSS:
     label: TailwindCSS
     permalink: /tailwind
     description: 涉及到TailwindCSS的文章
+React:
+    label: React
+    permalink: /react
+    description: 关于React的相关文章

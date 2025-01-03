@@ -1,7 +1,7 @@
 ---
 title: "Axios封装(第二版)"
 authors: ["AsMuin"]
-tags: ["Fetch","Typescript"]
+tags: ["Fetch","TypeScript"]
 ---
 
 ## 前言

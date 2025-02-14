@@ -4,6 +4,9 @@ authors: ["AsMuin"]
 tags: ["React"]
 ---
 
+`React`中的事件系统
+<!-- truncate -->
+
 ## 一图流
 ![React事件系统](React事件系统.awebp)
 **Tip : React16及其之前的版本,React17以后已经删除`事件池`**

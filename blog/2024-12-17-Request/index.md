@@ -3,7 +3,8 @@ title: "Axios封装(第二版)"
 authors: ["AsMuin"]
 tags: ["Fetch","TypeScript"]
 ---
-
+`Axios`封装
+<!-- truncate -->
 ## 前言
 本文基于`Axios`进行二次封装,皆在提供一种符合直觉且能够在大部分场景上进行使用的封装方式。
 

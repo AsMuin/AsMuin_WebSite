@@ -3,6 +3,9 @@ title: "Redux简单记录"
 authors: ["AsMuin"]
 tags: ["TypeScript","Redux"]
 ---
+
+`Redux`使用有感
+<!-- truncate -->
 ## Redux简述
 `Redux`是一个全局状态管理工具,与`pinia`不同,它并不依托与某个框架绑定使用。当然很多基于`React`搭建的项目都使用`Redux`作为全局状态管理工具。本文涉及的示例也是基于`React`的。
 `Redux`的特点：

@@ -3,7 +3,8 @@ title: "Vite的HMR实现过程"
 authors: ["AsMuin"]
 tags: ["Vite"]
 ---
-
+`Vite`热更新流程
+<!-- truncate -->
 ## 前言
 *Vite的HMR(热更新)仅限于在开发环境下使用,故以下默认都处于开发环境下。*
 

@@ -3,7 +3,8 @@ title: "React 组件封装思路"
 authors: ["AsMuin"]
 tags: ["React","TypeScript"]
 ---
-
+`React`组件封装以及`Hook`的综合运用
+<!-- truncate -->
 ## 前言
 
 `React`使用`JSX`编写`UI`组件,在`React`中,通过组件概念的封装,可以保证页面代码的复用性同时更好去维护,提高开发效率。

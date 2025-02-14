@@ -3,7 +3,8 @@ title: "TypeScript实战应用"
 authors: ["AsMuin"]
 tags: ["TypeScript","Fetch"]
 ---
-
+`TS`类型体操
+<!-- truncate -->
 ## 前言 
 本文借助axios请求封装作为实战用例
 涉及内容: `TypeScript`、`axios`、`React`

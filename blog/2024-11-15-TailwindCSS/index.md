@@ -3,6 +3,11 @@ title: "TailwindCSS简单记录"
 authors: ["AsMuin"]
 tags: ["CSS","TailwindCSS"]
 ---
+
+
+`Tailwindcss`使用有感
+<!-- truncate -->
+
 ## TailwindCSS简述
 之前的文章也提到过`TailwindCSS`这个`CSS`方案[CSS样式隔离方案](/blog/2024/10/24/CSS_scheme)
 最近都在用这个来编写`CSS`，所以简单总结一下使用体验。

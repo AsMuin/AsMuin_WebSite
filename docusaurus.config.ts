@@ -41,6 +41,8 @@ const config: Config = {
                         'https://github.com/AsMuin/AsMuin_WebSite/tree/main'
                 },
                 blog: {
+                    blogSidebarTitle: '所有文章',
+                    blogSidebarCount: 'ALL',
                     showReadingTime: true,
                     feedOptions: {
                         type: ['rss', 'atom'],

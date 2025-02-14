@@ -4,6 +4,9 @@ authors: ["AsMuin"]
 tags: ["TypeScript"]
 ---
 
+比较`Interface`,`Type`的差异
+<!-- truncate -->
+
 ## 写法的不同
 ```typescript
 interface Person {

@@ -34,3 +34,11 @@ React:
     label: React
     permalink: /react
     description: 关于React的相关文章
+Database:
+    label: 数据库
+    permalink: /database
+    description: 关于数据库的相关文章
+Auth:
+    label: 认证
+    permalink: /auth
+    description: 关于Web认证鉴权的相关文章

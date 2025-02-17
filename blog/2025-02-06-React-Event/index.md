@@ -8,6 +8,7 @@ tags: ["React"]
 <!-- truncate -->
 
 ## 一图流
+
 ![React事件系统](React事件系统.awebp)
 **Tip : React16及其之前的版本,React17以后已经删除`事件池`**
 [仅转载,图片来源:《「react进阶」一文吃透react事件系统原理》](https://juejin.cn/post/6955636911214067720?searchId=2025020614074044F34CB4ABF07AD28EA1)
@@ -47,6 +48,7 @@ tags: ["React"]
 当绑定事件到root上时,root上的事件监听函数是`listener`,`listener`并不是我们所写的事件处理函数,而是一个`事件监听包装器`,用于分化`事件处理优先级`。
 
 ## 事件触发 (事件监听器listener)
+
 `listener`做的事情可以用一句话概括,负责以不同的优先级权重来触发真正的事件流程，并传递事件执行阶段标志（`eventSystemFlags`）---区分`冒泡`和`捕获`执行。
 
 比如一个元素绑定了`onClick`事件，那么点击它的时候，绑定在`root`上的`listener`会被触发，会最终使得组件中的事件被执行。
@@ -69,6 +71,7 @@ tags: ["React"]
 ```
 
 ### 收集节点路径上的同类事件处理函数到执行数组中
+
 ```html
 <div onClick={onClickParent}>
   父元素
@@ -79,10 +82,10 @@ tags: ["React"]
 
 listeners: [ onClickChild, onClickParent ]
 ```
+
 `listeners`中就是节点路径上收集到的同类事件处理函数,据事件的冒泡和捕获阶段来决定事件执行的顺序。
 
 如果是冒泡就是从左往右执行，捕获则是从右往左执行。
 **`listeners`中的事件处理函数排列顺序不会受冒泡和捕获的影响,冒泡和捕获是通过执行顺序的不同而实现的**
-
 
 [本文参考文章:《深入React合成事件机制原理》](https://segmentfault.com/a/1190000039108951)

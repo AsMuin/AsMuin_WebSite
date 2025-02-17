@@ -19,7 +19,7 @@ tags: ["TypeScript","Redux"]
 *本文主要讲述Toolkit的实现模板,这也是`Redux`官方目前所推崇的配置方式*
 
 Tips⭐⭐:
-`Reduex Toolkit`在`reducer`函数中使用`immer`库去让你可以通过直接修改的方式更新数据，而不是重新返回一个新值。但需要注意的是`immer`只是通过`proxy`去帮我们去做返回新值的操作，本质上`reducer`函数永远接受一个新值，而不是直接修改旧值。
+`Redux Toolkit`在`reducer`函数中使用`immer`库去让你可以通过直接修改的方式更新数据，而不是重新返回一个新值。但需要注意的是`immer`只是通过`proxy`去帮我们去做返回新值的操作，本质上`reducer`函数永远接受一个新值，而不是直接修改旧值。
 
 ## Redux的构成
 

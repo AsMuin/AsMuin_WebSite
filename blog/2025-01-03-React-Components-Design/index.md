@@ -13,6 +13,7 @@ tags: ["React","TypeScript"]
 
 在我们的页面开发中这种封装思路应该是最常见的。
 父组件通过传入`Props`从而控制子组件的行为和表现。同时,子组件也可以借由父组件传入的`ref`将自己的部分内容暴露给父组件进行访问
+
 ```tsx
 // 父组件
 import { useState, useRef } from'react';
@@ -113,6 +114,7 @@ Drawer.Content = function DrawerContent({ children }: { children: React.ReactNod
 };
 export default Drawer;
 ```
+
 这是一个典型的抽屉`UI`组件,`PageContent`和`Content`分别是主页面的内容和抽屉容器内容。我们将`Drawer`组件作为一个`Provider`组件,将`Drawer`组件内部的`state`和`action`暴露给子组件。
 
 主页面的内容和抽屉容器内容,也就是`PageContent`和`Content`组件中的`children`,它们作为`JSX.Elemnt`插入到相应的位置。在这些组件或者这些组件的后代组件,都能通过`useDrawerContext`方法访问到`Drawer`组件内部的`state`和`action`,控制抽屉的打开和关闭。

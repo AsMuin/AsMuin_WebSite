@@ -8,6 +8,7 @@ tags: ["TypeScript"]
 <!-- truncate -->
 
 ## 写法的不同
+
 ```typescript
 interface Person {
     name: string,
@@ -21,9 +22,12 @@ type Student = {
     saySomething(text:string):void
 }
 ```
+
 ## 适用范围
+
 `type`作为类型别名能够用于`基本数据类型`、`联合类型`、`元组`,
 而`interface`做不到
+
 ```typescript
 // primitive
 type Name = string;
@@ -42,8 +46,11 @@ type Data = [number, string];
 let div = document.createElement('div');
 type B = typeof div;
 ```
+
 ## 定义
+
 与`类型别名`不同，`接口`可以定义多次，会被自动合并为单个接口。
+
 ```typescript
 interface Point { x: number; }
 interface Point { y: number; }
@@ -51,9 +58,11 @@ const point: Point = { x: 1, y: 2 };
 ```
 
 ## 拓展
+
 两者的扩展方式不同，但并不互斥。`接口`可以扩展`类型别名`，同理，`类型别名`也可以扩展`接口`。
 
 `接口`的扩展就是`继承`，通过 `extends` 来实现。`类型别名`的扩展就是`交叉类型`，通过 `&` 来实现
+
 ```typescript
 //类型别名拓展类型别名
 type PointX = {

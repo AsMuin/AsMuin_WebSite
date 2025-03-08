@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.scss';
 import Link from '@docusaurus/Link';
+import { JSX } from 'react';
 
 type FeatureItem = {
     title: string;

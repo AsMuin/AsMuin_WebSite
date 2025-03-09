@@ -1,6 +1,9 @@
 backend:
-    name: git-gateway
+    # name: git-gateway
+    name: github
+    repo: AsMuin/AsMuin_WebSite
     branch: edit # Branch to update (optional; defaults to master)
+    i18n: true
 media_folder: 'img/uploads' # Media files will be stored in the repo under images/uploads
 collections:
     - name: 'blog' # Used in routes, e.g., /admin/collections/blog

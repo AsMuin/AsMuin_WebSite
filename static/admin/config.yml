@@ -1,6 +1,6 @@
 backend:
     # name: test-repo
-    # name: git-gateway0
+    # name: git-gateway
     name: github
     repo: AsMuin/AsMuin_WebSite
     branch: edit # Branch to update (optional; defaults to master)
@@ -20,8 +20,12 @@ collections:
       extension: md
       widget: 'list'
       create: true
+      nested:
+          depth: 10 # max depth to show in the collection tree
+          summary: '{{title}}' # optional summary for a tree node, defaults to the inferred title field
       slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
       preview_path: 'blog/{{year}}/{{month}}/{{day}}/{{slug}}'
+      meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
       fields: # The fields for each document, usually in front matter
           - { label: '标题', name: 'title', widget: 'string' }
           - {

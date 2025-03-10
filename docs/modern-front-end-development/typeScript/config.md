@@ -1,16 +1,18 @@
 ---
+title: TypeScript的配置文件
 sidebar_position: 3
 ---
-# TypeScript的配置文件
 `tsconfig.json`是`TypeScript`项目的配置文件,其文件包含`TS`编译的相关设置,通过更改编译配置项,可以让`TS`编译出不同的代码
 
 ## tsconfig.json重要字段
+
 - **files**: 设置要编译的文件
 - **include**: 设置需要进行编译的文件,支持路径模式匹配
 - **exclude**: 设置无需进行编译的文件,支持路径模式匹配
 - **compilerOptions**: 编译流程相关的选项
 
 ### compilerOptions选项
+
 ```javascript
 {
   "compilerOptions": {

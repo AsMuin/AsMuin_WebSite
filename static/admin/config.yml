@@ -1,7 +1,7 @@
 backend:
     # name: test-repo
-    name: git-gateway
-    # name: github
+    # name: git-gateway0
+    name: github
     # repo: AsMuin/AsMuin_WebSite
     # branch: edit # Branch to update (optional; defaults to master)
     # i18n: true

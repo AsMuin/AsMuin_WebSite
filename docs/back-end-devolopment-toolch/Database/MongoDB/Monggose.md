@@ -1,13 +1,15 @@
 ---
+title: Mongoose
 sidebar_position: 2
 ---
 
-# Mongoose
 
 ## 简介
+
 `Mongoose`是`MongoDB`的一个`ORM`工具,它可以将`MongoDB`的数据映射到`JS`对象上,使得我们可以使用`JS`来操作`MongoDB`。本文将介绍`Mongoose`的基本使用。(`Node + TS`)
 
 ## 连接数据库
+
 ```ts
 import mongoose from 'mongoose';
 
@@ -21,6 +23,7 @@ connectToMongoDB();
 ```
 
 ## 定义集合数据结构,导出模型
+
 ```ts
 import mongoose from 'mongoose';
 interface IUser {
@@ -50,13 +53,16 @@ const User = mongoose.model<IUser>('User',userSchema)
 export default User;
 ```
 
-##  使用模型 (异步操作)
+## 使用模型 (异步操作)
+
 tips: 涉及的选择器很多,根据常用的大致可分为
+
 ID选择 | 选择单个(如果存在多个就选择第一个) | 选择多个
 --- | --- | ---
 `xxxById` | `xxxOne` | `xxx or xxxMany`
 
 ### 新增
+
 ```ts
 //创建了一个新的 User文档
 const newUser = new User({
@@ -68,7 +74,9 @@ newUser.save()
 ```
 
 ### 查询
+
 借助`Where`可以使用MongoDB的查询语法来进行更复杂,灵活的查询,涉及内容比较多,这里就不赘述了。
+
 ```ts
 // 单一查询(根据id检索或者唯一标识 ---也有从多个数据里选择第一个数据的方法)
 const selectedUser = User.findById(userId);
@@ -85,6 +93,7 @@ const userQuery = User.find().skip((pageIndex-1)*pageSize).limit(pageSize);
 ```
 
 ### 更新、删除
+
 ```ts
 // 更新  (第一个参数为 filter , 第二个为更新的字段和值)
 const updateUser = User.findByIdAndUpdate(userId,{name:'AsMuin',age:18}) //返回更新后的数据

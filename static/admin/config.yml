@@ -35,7 +35,7 @@ collections:
           summary: '{{title}}' # optional summary for a tree node, defaults to the inferred title field
       slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
       preview_path: 'blog/{{year}}/{{month}}/{{day}}/{{slug}}'
-      meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+      # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
       fields: # The fields for each document, usually in front matter
           - { label: '标题', name: 'title', widget: 'string' }
           - {
@@ -52,10 +52,9 @@ collections:
     - name: pages
       label: 文档
       folder: 'docs'
-      path: '{{slug}}'
       extension: md
-      preview_path: docs
       create: true
+      slug: '{{ title }}'
       # adding a nested object will show the collection folder structure
       nested:
           depth: 100 # max depth to show in the collection tree

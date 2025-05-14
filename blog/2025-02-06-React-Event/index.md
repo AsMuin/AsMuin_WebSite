@@ -4,7 +4,7 @@ authors: ["AsMuin"]
 tags: ["React"]
 ---
 
-`React`中的事件系统
+`React`的事件系统
 <!-- truncate -->
 
 ## 一图流

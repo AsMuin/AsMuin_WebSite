@@ -46,8 +46,12 @@ collections:
             }
           - { label: '发布日期', name: 'date', widget: 'datetime' }
           - { label: '标签', name: 'tags', widget: 'list' }
-          - { label: '摘要', name: 'description', widget: 'text' }
-          - { label: '正文', name: 'body', widget: 'markdown' }
+          - {
+                label: '正文',
+                name: 'body',
+                widget: 'markdown',
+                default: '<!-- truncate -->'
+            }
     # 文档配置
     - name: pages
       label: 文档

@@ -3,9 +3,10 @@ title: "现代化工程中CSS样式方案"
 authors: ["AsMuin"]
 tags: ["CSS"]
 ---
-## 前言
 
 本文讨论的是`CSS`方案是从项目工程化的角度出发。
+
+<!-- truncate -->
 
 ## 内联样式
 

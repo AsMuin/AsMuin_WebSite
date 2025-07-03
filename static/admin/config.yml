@@ -14,7 +14,7 @@ backend:
     # name: git-gateway
     name: github
     repo: AsMuin/AsMuin_WebSite
-    branch: edit # Branch to update (optional; defaults to master)
+    branch: main # Branch to update (optional; defaults to master)
 media_folder: 'static/img' # Media files will be stored in the repo under static/images/uploads
 public_folder: '/img/' # The src attribute for uploaded media will begin with /images/uploads
 site_url: 'https://docs.asmuin.top'
